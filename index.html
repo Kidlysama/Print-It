@@ -18,11 +18,17 @@
 </header>
 <main>
 	<div id="banner">
-		<img src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
-		<p>Impressions tous formats <span>en boutique et en ligne</span></p>
-		<div class="dots">
-		</div>
-	</div>
+        <img id="img_slide" src="./assets/images/slideshow/slide1.jpg" alt="Banner Print-it">
+        <p id="tagline" >Impressions tous formats <span>en boutique et en ligne</span></p>
+        <div class="dots" id="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <img  onclick="carousel(1)" class="arrow arrow_right" src="./assets/images/arrow_right.png" alt="">
+        <img  onclick="carousel(-1)" class="arrow arrow_left" src="./assets/images/arrow_left.png" alt="">
+    </div>
 	<section id="about-us" class="container">
 		<div>
 			<h2>Qui sommes-nous ?</h2>
