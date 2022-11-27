@@ -21,18 +21,16 @@ current_index = 0;
 
 function carousel(i){
     current_index += i;
-    if (current_index > 4) { current_index = 1; }
-    if (current_index < 1) { current_index = 4; }
+    if (current_index > slides.length) { current_index = 1; }
+    if (current_index < 1) { current_index = slides.length; }
     document.getElementById('img_slide').src = "./assets/images/slideshow/"+slides[current_index - 1].image;
     document.getElementById('tagline').innerHTML = slides[current_index - 1].tagLine;
-
-    for (var j = 0; j < 4; j++) {
+    for (var j = 0; j < slides.length; j++) {
         document.getElementById('dots').children[j].className = "dot";
         if (current_index - 1 == j) {
             document.getElementById('dots').children[j].className = "dot dot_selected";
         }
     }
-
 }
 
 carousel(1);
